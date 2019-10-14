@@ -1,0 +1,39 @@
+{
+    "name": "simpod/json-rpc",
+    "description": "PHP JSON-RPC 2.0 PSR-7 Message factory",
+    "keywords": ["http", "json", "json-rpc", "jsonrpc", "ring", "rpc"],
+    "homepage": "https://github.com/simpod/jsonrpc",
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "SimPod\\JsonRpc\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SimPod\\JsonRpc\\tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "php-http/httplug": "^2.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0",
+        "nyholm/psr7": "^1.2",
+        "thecodingmachine/safe": "^0.1.16"
+    },
+    "require-dev": {
+        "doctrine/coding-standard": "^6.0",
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan": "^0.11.16",
+        "phpstan/phpstan-phpunit": "^0.11.2",
+        "phpstan/phpstan-strict-rules": "^0.11.1",
+        "phpunit/phpunit": "^8.4"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
