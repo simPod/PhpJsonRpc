@@ -15,12 +15,6 @@ abstract class Extractor
     public function __construct(MessageInterface $message)
     {
         $body                  = $message->getBody();
-        $this->messageContents = json_decode($body->getContents(), true);
-
-        if (! $body->isSeekable()) {
-            return;
-        }
-
-        $body->rewind();
+        $this->messageContents = json_decode((string) $body, true);
     }
 }
