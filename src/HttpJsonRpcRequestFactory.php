@@ -7,14 +7,14 @@ namespace SimPod\JsonRpc;
 use Nyholm\Psr7\Stream;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
+
 use function Safe\json_encode;
 
 final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
 {
     private const V2_0 = '2.0';
 
-    /** @var RequestFactoryInterface */
-    private $messageFactory;
+    private RequestFactoryInterface $messageFactory;
 
     public function __construct(RequestFactoryInterface $messageFactory)
     {
@@ -29,8 +29,8 @@ final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
         return $this->createRequest(
             [
                 'jsonrpc' => self::V2_0,
-                'method'  => $method,
-                'params'  => $params,
+                'method' => $method,
+                'params' => $params,
             ]
         );
     }
@@ -42,8 +42,8 @@ final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
     {
         $body = [
             'jsonrpc' => self::V2_0,
-            'method'  => $method,
-            'id'      => $id,
+            'method' => $method,
+            'id' => $id,
         ];
 
         if ($params !== null) {
@@ -53,9 +53,7 @@ final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
         return $this->createRequest($body);
     }
 
-    /**
-     * @param mixed[] $body
-     */
+    /** @param mixed[] $body */
     private function createRequest(array $body = []) : RequestInterface
     {
         return $this->messageFactory->createRequest('POST', '')

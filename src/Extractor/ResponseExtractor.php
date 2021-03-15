@@ -8,33 +8,33 @@ final class ResponseExtractor extends Extractor
 {
     public function getErrorCode() : ?int
     {
-        return $this->messageContents['error']['code'] ?? null;
+        $error = $this->messageContents['error'] ?? null;
+
+        return $error === null ? null : $error['code'];
     }
 
     public function getErrorMessage() : ?string
     {
-        return $this->messageContents['error']['message'] ?? null;
+        $error = $this->messageContents['error'] ?? null;
+
+        return $error === null ? null : $error['message'];
     }
 
-    /**
-     * @return mixed
-     */
+    /** @return mixed */
     public function getErrorData()
     {
-        return $this->messageContents['error']['data'] ?? null;
+        $error = $this->messageContents['error'] ?? null;
+
+        return $error === null ? null : ($error['data'] ?? null);
     }
 
-    /**
-     * @return string|int|null
-     */
+    /** @return string|int|null */
     public function getId()
     {
         return $this->messageContents['id'] ?? null;
     }
 
-    /**
-     * @return mixed
-     */
+    /** @return mixed */
     public function getResult()
     {
         return $this->messageContents['result'] ?? null;

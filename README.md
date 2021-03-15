@@ -1,8 +1,38 @@
 # JSON RPC 2.0 PSR-7 Message Factory
 
-[![Build Status](https://travis-ci.com/simpod/json-rpc.svg?branch=master)](https://travis-ci.com/simpod/json-rpc)
-[![Downloads](https://poser.pugx.org/simpod/json-rpc/d/total.svg)](https://packagist.org/packages/simpod/json-rpc)
-[![Packagist](https://poser.pugx.org/simpod/json-rpc/v/stable.svg)](https://packagist.org/packages/simpod/json-rpc)
-[![Licence](https://poser.pugx.org/simpod/json-rpc/license.svg)](https://packagist.org/packages/simpod/json-rpc)
-[![Quality Score](https://scrutinizer-ci.com/g/simpod/json-rpc/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/simpod/json-rpc)
-[![Code Coverage](https://scrutinizer-ci.com/g/simpod/json-rpc/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/simpod/json-rpc)
+[![GitHub Actions][GA Image]][GA Link]
+[![Shepherd Type][Shepherd Image]][Shepherd Link]
+[![Code Coverage][Coverage Image]][CodeCov Link]
+[![Downloads][Downloads Image]][Packagist Link]
+[![Packagist][Packagist Image]][Packagist Link]
+[![Infection MSI][Infection Image]][Infection Link]
+
+## Installation
+
+Add as [Composer](https://getcomposer.org/) dependency:
+
+```sh
+composer require simpod/json-rpc
+```
+
+[GA Image]: https://github.com/simPod/PhpJsonRpc/workflows/CI/badge.svg
+
+[GA Link]: https://github.com/simPod/PhpJsonRpc/actions?query=workflow%3A%22CI%22+branch%3Amaster
+
+[Shepherd Image]: https://shepherd.dev/github/simPod/PhpJsonRpc/coverage.svg
+
+[Shepherd Link]: https://shepherd.dev/github/simPod/PhpJsonRpc
+
+[Coverage Image]: https://codecov.io/gh/simPod/PhpJsonRpc/branch/master/graph/badge.svg
+
+[CodeCov Link]: https://codecov.io/gh/simPod/PhpJsonRpc/branch/master
+
+[Downloads Image]: https://poser.pugx.org/simpod/json-rpc/d/total.svg
+
+[Packagist Image]: https://poser.pugx.org/simpod/json-rpc/v/stable.svg
+
+[Packagist Link]: https://packagist.org/packages/simpod/json-rpc
+
+[Infection Image]: https://badge.stryker-mutator.io/github.com/simPod/PhpJsonRpc/master
+
+[Infection Link]: https://infection.github.io
