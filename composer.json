@@ -33,7 +33,7 @@
         "phpstan/phpstan-phpunit": "0.12.22",
         "phpstan/phpstan-strict-rules": "^0.12.7",
         "phpunit/phpunit": "^9.5",
-        "psalm/plugin-phpunit": "0.15.1",
+        "psalm/plugin-phpunit": "0.16.1",
         "thecodingmachine/phpstan-safe-rule": "^1.0",
         "vimeo/psalm": "4.6.3"
     },
