@@ -29,7 +29,7 @@
         "hectorj/safe-php-psalm-plugin": "dev-master#b60ed45a06d5246e2efd193ce9c8940b244d5c7d",
         "jakub-onderka/php-parallel-lint": "^1.0",
         "phpstan/extension-installer": "^1.0",
-        "phpstan/phpstan": "0.12.81",
+        "phpstan/phpstan": "0.12.99",
         "phpstan/phpstan-phpunit": "0.12.18",
         "phpstan/phpstan-strict-rules": "^0.12.7",
         "phpunit/phpunit": "^9.5",
