@@ -22,7 +22,7 @@
         "php-http/httplug": "^2.0",
         "psr/http-factory": "^1.0",
         "psr/http-message": "^1.0",
-        "thecodingmachine/safe": "^1.0.2"
+        "thecodingmachine/safe": "^1 || ^2"
     },
     "require-dev": {
         "cdn77/coding-standard": "^4.0",
