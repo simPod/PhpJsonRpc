@@ -10,12 +10,12 @@ use function Safe\json_decode;
 
 abstract class Extractor
 {
-    /** @var array{id: string, jsonrpc: string, error?: array{code: int, message: string, data?: mixed}, method: string, params?: array<string, mixed>} */
+    /** @var array{id: string, jsonrpc: string, error?: array{code: int, message: string, data?: mixed}, method: string, params?: array<string, mixed>, result?: mixed} */
     protected array $messageContents;
 
     public function __construct(MessageInterface $message)
     {
-        /** @var array{id: string, jsonrpc: string, error?: array{code: int, message: string, data?: mixed}, method: string, params?: array<string, mixed>} $contents */
+        /** @var array{id: string, jsonrpc: string, error?: array{code: int, message: string, data?: mixed}, method: string, params?: array<string, mixed>, result?: mixed} $contents */
         $contents = json_decode((string) $message->getBody(), true);
         $this->messageContents = $contents;
     }
