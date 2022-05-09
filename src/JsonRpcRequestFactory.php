@@ -16,7 +16,7 @@ interface JsonRpcRequestFactory
      *
      * @param mixed[]|null $params
      */
-    public function notification(string $method, ?array $params = null) : RequestInterface;
+    public function notification(string $method, ?array $params = null): RequestInterface;
 
     /**
      * @link   http://www.jsonrpc.org/specification#request_object
@@ -24,5 +24,5 @@ interface JsonRpcRequestFactory
      * @param string|int|null $id
      * @param mixed[]|null    $params
      */
-    public function request($id, string $method, ?array $params = null) : RequestInterface;
+    public function request($id, string $method, ?array $params = null): RequestInterface;
 }

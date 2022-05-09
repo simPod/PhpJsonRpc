@@ -21,10 +21,7 @@ final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
         $this->messageFactory = $messageFactory;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function notification(string $method, ?array $params = null) : RequestInterface
+    public function notification(string $method, ?array $params = null): RequestInterface
     {
         return $this->createRequest(
             [
@@ -38,7 +35,7 @@ final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
     /**
      * {@inheritdoc}
      */
-    public function request($id, string $method, ?array $params = null) : RequestInterface
+    public function request($id, string $method, ?array $params = null): RequestInterface
     {
         $body = [
             'jsonrpc' => self::V2_0,
@@ -54,7 +51,7 @@ final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
     }
 
     /** @param mixed[] $body */
-    private function createRequest(array $body = []) : RequestInterface
+    private function createRequest(array $body = []): RequestInterface
     {
         return $this->messageFactory->createRequest('POST', '')
             ->withHeader('Content-Type', 'application/json')
