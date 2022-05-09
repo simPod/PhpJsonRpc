@@ -6,36 +6,33 @@ namespace SimPod\JsonRpc\Extractor;
 
 final class ResponseExtractor extends Extractor
 {
-    public function getErrorCode(): ?int
+    public function getErrorCode(): int|null
     {
         $error = $this->messageContents['error'] ?? null;
 
         return $error === null ? null : $error['code'];
     }
 
-    public function getErrorMessage(): ?string
+    public function getErrorMessage(): string|null
     {
         $error = $this->messageContents['error'] ?? null;
 
         return $error === null ? null : $error['message'];
     }
 
-    /** @return mixed */
-    public function getErrorData()
+    public function getErrorData(): mixed
     {
         $error = $this->messageContents['error'] ?? null;
 
         return $error === null ? null : ($error['data'] ?? null);
     }
 
-    /** @return string|int|null */
-    public function getId()
+    public function getId(): string|int|null
     {
         return $this->messageContents['id'] ?? null;
     }
 
-    /** @return mixed */
-    public function getResult()
+    public function getResult(): mixed
     {
         return $this->messageContents['result'] ?? null;
     }

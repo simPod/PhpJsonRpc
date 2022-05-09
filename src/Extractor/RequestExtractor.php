@@ -6,8 +6,7 @@ namespace SimPod\JsonRpc\Extractor;
 
 final class RequestExtractor extends Extractor
 {
-    /** @return string|int|null */
-    public function getId()
+    public function getId(): string|int|null
     {
         return $this->messageContents['id'] ?? null;
     }
@@ -18,7 +17,7 @@ final class RequestExtractor extends Extractor
     }
 
     /** @return mixed[]|null */
-    public function getParams(): ?array
+    public function getParams(): array|null
     {
         return $this->messageContents['params'] ?? null;
     }

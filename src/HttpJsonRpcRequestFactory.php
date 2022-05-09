@@ -14,14 +14,11 @@ final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
 {
     private const V2_0 = '2.0';
 
-    private RequestFactoryInterface $messageFactory;
-
-    public function __construct(RequestFactoryInterface $messageFactory)
+    public function __construct(private RequestFactoryInterface $messageFactory)
     {
-        $this->messageFactory = $messageFactory;
     }
 
-    public function notification(string $method, ?array $params = null): RequestInterface
+    public function notification(string $method, array|null $params = null): RequestInterface
     {
         return $this->createRequest(
             [
@@ -32,10 +29,7 @@ final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
         );
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function request($id, string $method, ?array $params = null): RequestInterface
+    public function request(string|int|null $id, string $method, array|null $params = null): RequestInterface
     {
         $body = [
             'jsonrpc' => self::V2_0,
