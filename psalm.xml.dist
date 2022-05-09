@@ -19,7 +19,6 @@
         </ignoreFiles>
     </projectFiles>
     <plugins>
-        <pluginClass class="HectorJ\SafePHPPsalmPlugin\Plugin"/>
         <pluginClass class="Psalm\PhpUnitPlugin\Plugin" />
     </plugins>
 </psalm>

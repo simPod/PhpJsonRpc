@@ -22,11 +22,10 @@
         "php-http/httplug": "^2.0",
         "psr/http-factory": "^1.0",
         "psr/http-message": "^1.0",
-        "thecodingmachine/safe": "^1 || ^2"
+        "thecodingmachine/safe": "^2"
     },
     "require-dev": {
         "cdn77/coding-standard": "^6.0",
-        "hectorj/safe-php-psalm-plugin": "dev-master#b60ed45a06d5246e2efd193ce9c8940b244d5c7d",
         "jakub-onderka/php-parallel-lint": "^1.0",
         "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^1.0.0",
