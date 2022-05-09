@@ -12,18 +12,18 @@ final class RequestExtractor extends Extractor
         return $this->messageContents['id'] ?? null;
     }
 
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return $this->messageContents['method'];
     }
 
     /** @return mixed[]|null */
-    public function getParams() : ?array
+    public function getParams(): ?array
     {
         return $this->messageContents['params'] ?? null;
     }
 
-    public function getVersion() : string
+    public function getVersion(): string
     {
         return $this->messageContents['jsonrpc'];
     }
