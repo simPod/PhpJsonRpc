@@ -34,7 +34,7 @@
         "phpunit/phpunit": "^9.5",
         "psalm/plugin-phpunit": "0.18.3",
         "thecodingmachine/phpstan-safe-rule": "^1.0",
-        "vimeo/psalm": "4.29.0"
+        "vimeo/psalm": "4.30.0"
     },
     "config": {
         "allow-plugins": {
