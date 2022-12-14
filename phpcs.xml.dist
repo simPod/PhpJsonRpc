@@ -5,7 +5,7 @@
 >
     <arg name="cache" value=".phpcs-cache" />
 
-    <config name="php_version" value="81000" />
+    <config name="php_version" value="80100" />
 
     <rule ref="Cdn77">
         <exclude name="SlevomatCodingStandard.Files.LineLength.LineTooLong" />
