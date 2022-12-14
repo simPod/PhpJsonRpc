@@ -16,7 +16,7 @@
         }
     },
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "ext-json": "*",
         "nyholm/psr7": "^1.2",
         "php-http/httplug": "^2.0",
