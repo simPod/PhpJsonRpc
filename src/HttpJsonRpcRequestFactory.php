@@ -12,7 +12,7 @@ use function Safe\json_encode;
 
 final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
 {
-    private const V2_0 = '2.0';
+    private const V20 = '2.0';
 
     public function __construct(private RequestFactoryInterface $messageFactory)
     {
@@ -22,17 +22,17 @@ final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
     {
         return $this->createRequest(
             [
-                'jsonrpc' => self::V2_0,
+                'jsonrpc' => self::V20,
                 'method' => $method,
                 'params' => $params,
-            ]
+            ],
         );
     }
 
     public function request(string|int|null $id, string $method, array|null $params = null): RequestInterface
     {
         $body = [
-            'jsonrpc' => self::V2_0,
+            'jsonrpc' => self::V20,
             'method' => $method,
             'id' => $id,
         ];
