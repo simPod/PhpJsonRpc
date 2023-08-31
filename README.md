@@ -5,7 +5,6 @@
 [![Code Coverage][Coverage Image]][CodeCov Link]
 [![Downloads][Downloads Image]][Packagist Link]
 [![Packagist][Packagist Image]][Packagist Link]
-[![Infection MSI][Infection Image]][Infection Link]
 
 ## Installation
 
@@ -32,7 +31,3 @@ composer require simpod/json-rpc
 [Packagist Image]: https://poser.pugx.org/simpod/json-rpc/v/stable.svg
 
 [Packagist Link]: https://packagist.org/packages/simpod/json-rpc
-
-[Infection Image]: https://badge.stryker-mutator.io/github.com/simPod/PhpJsonRpc/master
-
-[Infection Link]: https://infection.github.io
