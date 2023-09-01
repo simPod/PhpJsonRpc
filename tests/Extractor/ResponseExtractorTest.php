@@ -48,11 +48,10 @@ EOD;
 
         $sut = new ResponseExtractor($response);
 
+        /** @var array<string, mixed> $result */
         $result = $sut->getResult();
 
-		self::assertIsArray($result);
-
-		/** @var array $result */
+        self::assertIsArray($result);
 
         self::assertArrayHasKey('key', $result);
         self::assertEquals('value', $result['key']);
