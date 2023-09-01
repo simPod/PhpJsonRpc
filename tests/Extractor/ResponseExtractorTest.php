@@ -51,8 +51,6 @@ EOD;
         /** @var array<string, mixed> $result */
         $result = $sut->getResult();
 
-        self::assertIsArray($result);
-
         self::assertArrayHasKey('key', $result);
         self::assertEquals('value', $result['key']);
     }
