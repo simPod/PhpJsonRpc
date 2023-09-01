@@ -50,6 +50,10 @@ EOD;
 
         $result = $sut->getResult();
 
+		self::assertIsArray($result);
+
+		/** @var array $result */
+
         self::assertArrayHasKey('key', $result);
         self::assertEquals('value', $result['key']);
     }
