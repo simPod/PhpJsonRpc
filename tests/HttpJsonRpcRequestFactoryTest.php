@@ -4,19 +4,16 @@ declare(strict_types=1);
 
 namespace SimPod\JsonRpc;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use PsrMock\Psr17\RequestFactory;
 use PsrMock\Psr17\StreamFactory;
 
 use function Safe\preg_replace;
 
-/** @coversDefaultClass \SimPod\JsonRpc\HttpJsonRpcRequestFactory */
-class HttpJsonRpcRequestFactoryTest extends TestCase
+#[CoversClass(HttpJsonRpcRequestFactory::class)]
+final class HttpJsonRpcRequestFactoryTest extends TestCase
 {
-    /**
-     * @covers ::request
-     * @covers ::createRequest
-     */
     public function testRequestBody(): void
     {
         $messageFactory = new RequestFactory();
@@ -43,10 +40,6 @@ EOD;
         );
     }
 
-    /**
-     * @covers ::request
-     * @covers ::createRequest
-     */
     public function testRequestHeader(): void
     {
         $messageFactory = new RequestFactory();

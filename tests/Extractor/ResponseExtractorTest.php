@@ -4,19 +4,16 @@ declare(strict_types=1);
 
 namespace SimPod\JsonRpc\Extractor;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use PsrMock\Psr17\RequestFactory;
 use PsrMock\Psr17\StreamFactory;
 use PsrMock\Psr18\Client;
 use PsrMock\Psr7\Response;
 
-/** @coversDefaultClass \SimPod\JsonRpc\Extractor\ResponseExtractor */
-class ResponseExtractorTest extends TestCase
+#[CoversClass(ResponseExtractor::class)]
+final class ResponseExtractorTest extends TestCase
 {
-    /**
-     * @covers Extractor::__construct
-     * @covers ::getResult
-     */
     public function testResponseResult(): void
     {
         $responseBody = <<<'EOD'
@@ -55,11 +52,6 @@ EOD;
         self::assertEquals('value', $result['key']);
     }
 
-    /**
-     * @covers Extractor::__construct
-     * @covers ::getId
-     * @covers ::getVersion
-     */
     public function testResponse(): void
     {
         $responseBody = <<<'EOD'
