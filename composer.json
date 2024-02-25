@@ -30,10 +30,8 @@
         "phpstan/phpstan-phpunit": "^1.0.0",
         "phpstan/phpstan-strict-rules": "^1.0.0",
         "phpunit/phpunit": "^10.3",
-        "psalm/plugin-phpunit": "0.18.4",
         "psr-mock/http": "^1.0",
-        "thecodingmachine/phpstan-safe-rule": "^1.0",
-        "vimeo/psalm": "^5.0"
+        "thecodingmachine/phpstan-safe-rule": "^1.0"
     },
     "config": {
         "allow-plugins": {
