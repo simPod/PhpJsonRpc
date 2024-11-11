@@ -8,7 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 
-use function Safe\json_encode;
+use function json_encode;
+
+use const JSON_THROW_ON_ERROR;
 
 final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
 {
@@ -49,8 +51,10 @@ final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
     /** @param mixed[] $body */
     private function createRequest(array $body = []): RequestInterface
     {
+        $encodedBody = json_encode($body, JSON_THROW_ON_ERROR);
+
         return $this->messageFactory->createRequest('POST', '')
             ->withHeader('Content-Type', 'application/json')
-            ->withBody($this->streamFactory->createStream(json_encode($body)));
+            ->withBody($this->streamFactory->createStream($encodedBody));
     }
 }

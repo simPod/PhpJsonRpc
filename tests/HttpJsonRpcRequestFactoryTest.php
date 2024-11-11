@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 use PsrMock\Psr17\RequestFactory;
 use PsrMock\Psr17\StreamFactory;
 
-use function Safe\preg_replace;
+use function preg_replace;
 
 #[CoversClass(HttpJsonRpcRequestFactory::class)]
 final class HttpJsonRpcRequestFactoryTest extends TestCase

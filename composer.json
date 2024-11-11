@@ -19,8 +19,7 @@
         "php": "^8.2",
         "ext-json": "*",
         "psr/http-factory": "^1.0",
-        "psr/http-message": "^1.0 || ^2.0",
-        "thecodingmachine/safe": "^2"
+        "psr/http-message": "^1.0 || ^2.0"
     },
     "require-dev": {
         "cdn77/coding-standard": "^7.0",
@@ -30,8 +29,7 @@
         "phpstan/phpstan-phpunit": "^1.0.0",
         "phpstan/phpstan-strict-rules": "^1.0.0",
         "phpunit/phpunit": "^11.0",
-        "psr-mock/http": "^1.0",
-        "thecodingmachine/phpstan-safe-rule": "^1.0"
+        "psr-mock/http": "^1.0"
     },
     "config": {
         "allow-plugins": {
