@@ -24,9 +24,9 @@
     "require-dev": {
         "cdn77/coding-standard": "^7.0",
         "phpstan/extension-installer": "^1.0",
-        "phpstan/phpstan": "^1.0.0",
-        "phpstan/phpstan-phpunit": "^1.0.0",
-        "phpstan/phpstan-strict-rules": "^1.0.0",
+        "phpstan/phpstan": "^2.0.0",
+        "phpstan/phpstan-phpunit": "^2.0.0",
+        "phpstan/phpstan-strict-rules": "^2.0.0",
         "phpunit/phpunit": "^11.0",
         "psr-mock/http": "^1.0"
     },
