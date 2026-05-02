@@ -35,6 +35,7 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true
         },
+        "lock": false,
         "sort-packages": true
     }
 }
