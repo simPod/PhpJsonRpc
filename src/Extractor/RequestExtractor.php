@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace SimPod\JsonRpc\Extractor;
 
+/**
+ * @phpstan-import-type MessageContents from Extractor
+ * @extends Extractor<MessageContents>
+ */
 final class RequestExtractor extends Extractor
 {
     public function getId(): string|int|null

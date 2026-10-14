@@ -11,6 +11,7 @@ use function json_decode;
 use const JSON_THROW_ON_ERROR;
 
 /**
+ * @template TContents of array<array-key, mixed>
  * @phpstan-type MessageContents array{
  *     id: string|int,
  *     jsonrpc: string,
@@ -22,13 +23,20 @@ use const JSON_THROW_ON_ERROR;
  */
 abstract class Extractor
 {
-    /** @phpstan-var MessageContents */
+    /** @phpstan-var TContents */
     protected array $messageContents;
 
     public function __construct(MessageInterface $message)
     {
-        /** @phpstan-var MessageContents $contents */
-        $contents = json_decode((string) $message->getBody(), true, flags: JSON_THROW_ON_ERROR);
-        $this->messageContents = $contents;
+        $this->messageContents = $this->extractContents((string) $message->getBody());
+    }
+
+    /** @phpstan-return TContents */
+    protected function extractContents(string $body): array
+    {
+        /** @phpstan-var TContents $contents */
+        $contents = json_decode($body, true, flags: JSON_THROW_ON_ERROR);
+
+        return $contents;
     }
 }
