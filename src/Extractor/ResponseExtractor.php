@@ -7,7 +7,6 @@ namespace SimPod\JsonRpc\Extractor;
 use JsonException;
 use Psr\Http\Message\MessageInterface;
 
-use function array_key_exists;
 use function is_array;
 use function is_int;
 use function is_string;
@@ -19,7 +18,7 @@ use const JSON_THROW_ON_ERROR;
  * @phpstan-type ResponseContents array{
  *     id?: string|int|null,
  *     jsonrpc: string,
- *     error?: array{code: int, message: string, data?: mixed},
+ *     error?: array{code: int, message: string, data?: mixed}|null,
  *     result?: mixed
  * }
  * @extends Extractor<ResponseContents>
@@ -89,7 +88,7 @@ final class ResponseExtractor extends Extractor
             throw new MalformedResponse('Response id must be a string, integer or null.');
         }
 
-        if (array_key_exists('error', $contents)) {
+        if (isset($contents['error'])) {
             $error = $contents['error'];
             if (! is_array($error)) {
                 throw new MalformedResponse('Response error must be a JSON object.');

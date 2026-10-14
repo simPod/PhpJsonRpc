@@ -64,12 +64,15 @@ EOD;
         self::assertSame([['output' => 'completed'], null], $sut->getResult());
     }
 
-    public function testScalarResult(): void
+    public function testResponseWithNullError(): void
     {
-        $sut = new ResponseExtractor($this->response('{"id":42,"jsonrpc":"2.0","result":false}'));
+        $sut = new ResponseExtractor($this->response('{"id":42,"jsonrpc":"2.0","error":null,"result":false}'));
 
         self::assertSame(42, $sut->getId());
         self::assertFalse($sut->getResult());
+        self::assertNull($sut->getErrorCode());
+        self::assertNull($sut->getErrorMessage());
+        self::assertNull($sut->getErrorData());
     }
 
     #[DataProvider('provideMalformedResponse')]
@@ -92,7 +95,6 @@ EOD;
         yield 'boolean id' => ['{"jsonrpc":"2.0","id":false}', 'Response id must be a string, integer or null.'];
         yield 'fractional id' => ['{"jsonrpc":"2.0","id":1.5}', 'Response id must be a string, integer or null.'];
         yield 'structured id' => ['{"jsonrpc":"2.0","id":{}}', 'Response id must be a string, integer or null.'];
-        yield 'null error' => ['{"jsonrpc":"2.0","error":null}', 'Response error must be a JSON object.'];
         yield 'scalar error' => ['{"jsonrpc":"2.0","error":"failure"}', 'Response error must be a JSON object.'];
 
         yield 'missing error code' => [

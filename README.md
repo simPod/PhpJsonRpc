@@ -21,7 +21,7 @@ typed getters before they can be read:
 
 - The response must be a JSON object with a string `jsonrpc` field.
 - An optional `id` must be a string, integer or `null`.
-- If `error` is present, it must be an object with an integer `code` and a string `message`.
+- A non-null `error` must be an object with an integer `code` and a string `message`.
 
 Malformed fields cause `SimPod\JsonRpc\Extractor\MalformedResponse`, which extends
 `UnexpectedValueException`. Invalid JSON still causes `JsonException`. Both
