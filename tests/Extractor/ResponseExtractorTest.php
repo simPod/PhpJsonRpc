@@ -132,6 +132,6 @@ EOD;
 
     private function response(string $body): Response
     {
-        return (new Response())->withBody(new StreamFactory()->createStream($body));
+        return new Response()->withBody(new StreamFactory()->createStream($body));
     }
 }
