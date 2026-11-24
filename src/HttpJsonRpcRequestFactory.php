@@ -14,7 +14,7 @@ use const JSON_THROW_ON_ERROR;
 
 final class HttpJsonRpcRequestFactory implements JsonRpcRequestFactory
 {
-    private const V20 = '2.0';
+    private const string V20 = '2.0';
 
     public function __construct(
         private RequestFactoryInterface $messageFactory,

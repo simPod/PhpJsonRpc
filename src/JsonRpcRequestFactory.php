@@ -8,8 +8,8 @@ use Psr\Http\Message\RequestInterface;
 
 interface JsonRpcRequestFactory
 {
-    public const MethodRequest = 'REQUEST';
-    public const MethodNotification = 'NOTIFICATION';
+    public const string MethodRequest = 'REQUEST';
+    public const string MethodNotification = 'NOTIFICATION';
 
     /**
      * @link   http://www.jsonrpc.org/specification#notification
