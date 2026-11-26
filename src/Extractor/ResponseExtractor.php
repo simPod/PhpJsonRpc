@@ -19,7 +19,7 @@ use const JSON_THROW_ON_ERROR;
  *     id?: string|int|null,
  *     jsonrpc: string,
  *     error?: array{code: int, message: string, data?: mixed}|null,
- *     result?: mixed
+ *     result?: mixed,
  * }
  * @extends Extractor<ResponseContents>
  */
