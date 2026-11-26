@@ -18,7 +18,7 @@ use const JSON_THROW_ON_ERROR;
  *     error?: array{code: int, message: string, data?: mixed},
  *     method: string,
  *     params?: array<string, mixed>,
- *     result?: mixed
+ *     result?: mixed,
  * }
  */
 abstract class Extractor
